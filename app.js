@@ -9,8 +9,8 @@ const btns = document.querySelectorAll('.btn');
 btns.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
         console.log(e.currentTarget.classList);
-        const styles = (e.currentTarget.classList);
-
+        const styles = (e.currentTarget.classList);  //e - is a MouseEvent in this case, 
+        console.log(e); //currentTarget returns null but it has a classList with bnt and increase/reset/decrease
         if (styles.contains('decrease')) {
             count--;
         } else if (styles.contains('increase')) {
